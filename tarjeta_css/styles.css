@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background: #f0f4ec;
+    --text-color: #bd7dab;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Glory', sans-serif;
+}
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card{
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: #fff 0.5rem solid;
+    border-radius: 10px;
+}
+
+.card__upper{
+    width: 100%;
+    height: 50%;
+    border-bottom: none;
+    border-radius: 1rem 1rem 1rem 0;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.card__upper img{
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 1rem 1rem 1rem 0;
+}
+
+.card__upper:hover img{
+    filter: brightness(0.5);
+    transform: scale(-10px);
+    cursor: pointer;
+}
+.card__upper:hover {
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+}
+
+.card__upper::after{
+    content: ' ';
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    box-shadow: -10px 10px 0  #fff;
+}
+
+
+.card__down{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    border-radius: 0 0 1rem 1rem;
+    background-color: var(--background);
+}
+
+.card_border{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border: #fff 0.5rem solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.card__tab{
+    width: 50%;
+    height: 90px;
+    padding: 1rem 0;
+    position: absolute;
+    top: -82px;
+    left: 0;
+    background-color: var(--background);
+    border-radius: 0 2rem 0 0;
+    border: #fff 0.5rem solid;
+    border-bottom: none;
+    border-left: none;
+    color: #bd7dab;
+}
+
+.card__tab::after{
+    content: ' ';
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    box-shadow: -10px -8px 0  #fff;
+}
+
+.card__tab__text{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    background-color: #bd7dab;
+    border-radius: 1rem;
+    width: max-content;
+    padding: 0rem 1rem;
+    color: #fff;
+}
+
+.card__tab__text h3{
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
+.card__info{
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card__info p:nth-child(2){
+    padding: 0 3rem;
+}
+
+
+@media (width <= 425px) {
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: #fff 0.5rem solid;
+    border-radius: 10px;
+}
+.card__tab{
+    top: -82px;
+}
+.card__tab__text{
+    padding: 0rem 0rem;
+}
+.card__tab__text h3{
+    font-weight: bold;
+    padding: 0.5rem;
+}
+.card__info p:nth-child(2){
+    font-size: 0.8rem;
+    padding: 0 1rem;
+}
+}

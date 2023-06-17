@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="form__container">
+    <div class="form signup__container">
+        <h2 class="form__title">Register</h2>
+        <div class="input__box">
+            <input required="required" type="text" name="username">
+            <span>username</span>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input__box">
+            <input required="required" type="text" name="password">
+            <span>Password</span>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="input__box">
+            <input type="submit">
+        </div>
+
+        <p>Already a member? <a class="login__link" href="#">Log in</a></p>
+    </div>
+    <div class="form signin__container">
+        <h2 class="form__title">Log In</h2>
+        <div class="input__box">
+            <input required="required" type="text">
+            <span>username</span>
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="input__box">
+            <input type="submit">
+        </div>
+
+        <p>Don't have an account? <a class="register__link" href="#">Register</a></p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
